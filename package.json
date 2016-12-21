@@ -1,0 +1,30 @@
+{
+  "name": "rz_demo",
+  "version": "1.0.0",
+  "engines": {
+    "node": "7.2.1"
+  },
+  "description": "a fantastic test app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-emt/rz_demo"
+  },
+  "author": "Travis Huff, Eddie Park, Michael Sotkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-emt/rz_demo/issues"
+  },
+  "homepage": "https://github.com/team-emt/rz_demo",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pg": "6.1.0",
+    "razorframe": "^1.0.18",
+    "redis": "^2.6.3",
+    "socket.io": "^1.5.1"
+  }
+}
