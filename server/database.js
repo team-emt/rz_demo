@@ -5,7 +5,7 @@ const pg = require('pg');
 const db = {};
 
 pg.defaults.ssl = true;
-pg.connect(DATABASE_URL, (err, db_) => {
+pg.connect(process.env.DATABASE_URL, (err, db_) => {
 
   if (err) console.error(`Error with database connection: ${err}`);
   console.log(`connected to postgres!`);
