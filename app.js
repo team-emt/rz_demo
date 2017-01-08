@@ -23,7 +23,7 @@ rz.subscribe('dbOnLoad', (data) => {
     node = document.createElement('LI');
     textNode = document.createTextNode(JSON.parse(item));
     node.appendChild(textNode);
-    chatMsg.appendChild(node);
+    // chatMsg.appendChild(node);
 
     if (!flag) {
       newChat.insertAdjacentHTML('beforeEnd', `
@@ -79,7 +79,7 @@ rz.subscribe('chatMsg', (msg) => {
     node.style.color = 'red';
   }
   node.appendChild(textNode);
-  chatMsg.insertBefore(node, chatMsg.firstChild);
+  // chatMsg.insertBefore(node, chatMsg.firstChild);
 
   counter++;
 
@@ -101,7 +101,7 @@ rz.subscribe('chatMsg', (msg) => {
     flag = false;
   }
 
-  results.innerHTML = `Processed ${counter} tasks!`;
+  results.innerHTML = `Processed <span id="count">${counter}</span> tasks!`;
 })
 
 // socket.on('error', (msg) => {
@@ -131,17 +131,17 @@ const imgFeed = document.getElementById('image-feed');
 let img;
 
 // Event emitter for new image upload
-imageForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  uploadButton.innerHTML = "Uploading...";
+// imageForm.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   uploadButton.innerHTML = "Uploading...";
 
-  const contents = fileSelect.files[0];
-  const eventOut = 'imgSent';
-  socket.emit('imgSent', { contents, eventOut });
-  console.log('image sent..');
+//   const contents = fileSelect.files[0];
+//   const eventOut = 'imgSent';
+//   socket.emit('imgSent', { contents, eventOut });
+//   console.log('image sent..');
 
-  uploadButton.innerHTML = "Send"
-});
+//   uploadButton.innerHTML = "Send"
+// });
 
 // Event listener for new image upload
 // socket.on('imgSent', (data) => {
