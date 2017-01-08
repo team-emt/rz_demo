@@ -1,3 +1,4 @@
 node_modules/
 artillery*
 npm-debug.log
+.DS_Store

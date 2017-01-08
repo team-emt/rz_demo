@@ -21,6 +21,42 @@ p {
   margin-bottom: 6px;
 }
 
+#results {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 1.5em;
+}
+
+#count {
+  display: inline-block;
+  font-weight: 700;
+  color: white;
+  background-color: #FFA500;
+  border-radius: 5px;
+  padding: 5px;
+  width: 48px;
+  margin-bottom: -5px;
+  margin-top: -5px;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  min-width: 680px;
+
+}
+
+#chat-interface {
+  height: 655px;
+  width: 363px;
+  overflow: hidden;
+  position: absolute;
+  /*border: 1px solid red;*/
+  top: 62px;
+  left: 153px;
+}
+
 .before {
   display: none;
 }
